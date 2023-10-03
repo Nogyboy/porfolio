@@ -20,13 +20,7 @@ export const socialMediaIconLinks: {
     icon: keyof typeof iconPaths;
   }[] = [
     { label: "Twitter", href: "https://twitter.com/me", icon: "twitter-logo" },
-    { label: "Twitch", href: "https://twitch.tv/me", icon: "twitch-logo" },
     { label: "GitHub", href: "https://github.com/me", icon: "github-logo" },
-    { label: "CodePen", href: "https://codepen.io/me", icon: "codepen-logo" },
-    { label: "dribbble", href: "https://dribbble.com/me", icon: "dribbble-logo" },
-    {
-      label: "YouTube",
-      href: "https://www.youtube.com/@me/",
-      icon: "youtube-logo",
-    },
+    { label: "LinkedIn", href: "https://linkedin.com/in/me", icon: "linkedin-logo" },
+    { label: "Email", href: `mailto:${personalInfo.email}`, icon: "email" },
   ];

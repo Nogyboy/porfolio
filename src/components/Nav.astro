@@ -57,7 +57,6 @@ changeLanguage(i18next.language);
               href={href}
             >
               {t(label)}
-              <span class="underline"/>
             </a>
           </li>
         ))
@@ -97,7 +96,6 @@ changeLanguage(i18next.language);
               href={href}
             >
               {t(label)}
-              <span class="underline"/>
             </a>
           </li>
         ))
@@ -118,6 +116,26 @@ changeLanguage(i18next.language);
       <div class="theme-toggle">
         <ThemeToggle />
       </div>
+      <!-- Language Selector -->
+      <div class="language-selector">
+        <a href="/es/" class:list={[
+            "lang-link",
+            {
+              active: i18next.language === "es",
+            },
+          ]}
+          >ES
+          <!-- FLag -->
+        </a>
+        <a href="/" class:list={[
+            "lang-link",
+            {
+              active: i18next.language === "en",
+            },
+          ]}
+          
+          >EN
+        </a>
     </div>
   </div>
 </nav>
@@ -249,10 +267,6 @@ changeLanguage(i18next.language);
     color: var(--gray-0);
     background-color: var(--accent-regular);
   }
-  
-  a .underline {
-      display: none;
-    }
 
   .menu-footer {
     --icon-size: var(--text-xl);
@@ -290,6 +304,33 @@ changeLanguage(i18next.language);
     display: flex;
     align-items: center;
     height: calc(var(--icon-size) + 2 * var(--icon-padding));
+  }
+
+  .language-selector {
+    display: flex;
+    align-items: center;
+    height: calc(var(--icon-size) + 2 * var(--icon-padding));
+    gap: 0.3rem;
+  }
+
+  .lang-link {
+    display: flex;
+    padding: var(--icon-padding);
+    text-decoration: none;
+    color: var(--accent-dark);
+    transition: color var(--theme-transition);
+    border-radius: 0.2rem;
+  }
+
+  .lang-link:hover,
+  .lang-link:focus {
+    color: var(--menu-text-color-hover);
+    background-color: var(--menu-bg-color-hover);
+  }
+
+  .lang-link.active {
+    color: var(--menu-text-color-active);
+    background-color: var(--menu-bg-color-active);
   }
 
   @media (min-width: 50em) {
