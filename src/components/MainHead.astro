@@ -1,13 +1,20 @@
 ---
 import '../styles/global.css';
+import { personalInfo } from '../constants';
 
 interface Props {
 	title?: string | undefined;
 	description?: string | undefined;
 }
 
+// Check current language and object to translate
+import { t, changeLanguage } from 'i18next';
+import i18next from "i18next";
+
+changeLanguage(i18next.language);
+
 const {
-	title = 'Jeanine White: Personal Site',
+	title = `${personalInfo.name} | ${t('common.homeTabTitle')}`,
 	description = 'The personal site of Jeanine White',
 } = Astro.props;
 ---

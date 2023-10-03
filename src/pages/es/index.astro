@@ -2,8 +2,6 @@
 import { getCollection } from "astro:content";
 // Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import { t, changeLanguage } from "i18next";
-import { HeadHrefLangs } from "astro-i18next/components";
 // Component Imports
 import CallToAction from "../../components/CallToAction.astro";
 import Grid from "../../components/Grid.astro";
@@ -14,6 +12,8 @@ import PortfolioPreview from "../../components/PortfolioPreview.astro";
 // Page section components
 import ContactCTA from "../../components/ContactCTA.astro";
 import Skills from "../../components/Skills.astro";
+// Language support
+import { t, changeLanguage } from "i18next";
 
 changeLanguage("es");
 
@@ -24,7 +24,6 @@ const projects = (await getCollection("work"))
 ---
 
 <BaseLayout>
-  <HeadHrefLangs />
   <div class="stack gap-20 lg:gap-48">
     <div class="wrapper stack gap-8 lg:gap-20">
       <header class="hero">

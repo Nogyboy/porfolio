@@ -1,5 +1,13 @@
 {
     "home":{
         "title":"Home"
+    },
+    "common":{
+        "homeTabTitle":"Personal Website",
+        "homeTabDescription":"The personal site of Jeanine White",
+        "workTabTitle":"Work",
+        "workTabDescription":"Learn about Jeanine White's most recent projects",
+        "aboutTabTitle":"About",
+        "aboutTabDescription":"About Jeanine White Lorem Ipsum"
     }
 }
