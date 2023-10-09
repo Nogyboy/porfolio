@@ -3,6 +3,17 @@
         "title":"Inicio"
     },
     "common":{
-        "homeTabTitle":"Web Personal"
+        "homeTabTitle":"Web Personal",
+        "homeTabDescription":"The personal site of Jeanine White",
+        "workTabTitle":"Work",
+        "workTabDescription":"Learn about Jeanine White's most recent projects",
+        "aboutTabTitle":"About",
+        "aboutTabDescription":"About Jeanine White Lorem Ipsum",
+        "menuTitle":"Menu"
+    },
+    "menu":{
+        "home":"Inicio",
+        "work":"Proyectos",
+        "about":"Sobre Mí"
     }
 }

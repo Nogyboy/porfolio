@@ -42,7 +42,7 @@ changeLanguage(i18next.language);
   <noscript>
     <ul class="nav-items">
       {
-        textLinks.map(({ label, href }) => (
+        textLinks(i18next.language)?.map(({ label, href }) => (
           <li>
             <a
               aria-current={Astro.url.pathname === href}
@@ -51,7 +51,7 @@ changeLanguage(i18next.language);
                 {
                   active:
                     Astro.url.pathname === href ||
-                    (href !== "/" && Astro.url.pathname.startsWith(href)),
+                    (href !== "/" && Astro.url.pathname.startsWith(href) && href !== "/es/"),
                 },
               ]}
               href={href}
@@ -81,7 +81,7 @@ changeLanguage(i18next.language);
   <div id="menu-content" hidden>
     <ul class="nav-items">
       {
-        textLinks.map(({ label, href }) => (
+        textLinks(i18next.language)?.map(({ label, href }) => (
           <li>
             <a
               aria-current={Astro.url.pathname === href}
@@ -90,7 +90,7 @@ changeLanguage(i18next.language);
                 {
                   active:
                     Astro.url.pathname === href ||
-                    (href !== "/" && Astro.url.pathname.startsWith(href)),
+                    (href !== "/" && Astro.url.pathname.startsWith(href) && href !== "/es/"),
                 },
               ]}
               href={href}
