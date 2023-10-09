@@ -1,6 +1,7 @@
 {
     "home":{
-        "title":"Home"
+        "title":"Home",
+        "description":"Full-stack web developer, with a strong interest in creating useful technological solutions that adapt to people's needs."
     },
     "common":{
         "homeTabTitle":"Personal Website",
