@@ -6,7 +6,7 @@ import ContactCTA from "../components/ContactCTA.astro";
 import PortfolioPreview from "../components/PortfolioPreview.astro";
 import Hero from "../components/Hero.astro";
 import Grid from "../components/Grid.astro";
-
+// import { ViewTransitions } from "astro:transitions";
 // Personal info
 import { personalInfo } from "../constants";
 
@@ -22,6 +22,7 @@ const projects = (await getCollection("work")).sort((a, b) => b.data.publishDate
 	title={`${t("common.workTabTitle")} | ${personalInfo.name}`}
 	description="Learn about Jeanine White's most recent projects"
 >
+	<aside transition:name="hero"></aside>
 	<div class="stack gap-20">
 		<main class="wrapper stack gap-8">
 			<Hero
