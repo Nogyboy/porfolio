@@ -1,13 +1,17 @@
 ---
-import { changeLanguage } from "i18next";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import ContactCTA from "../../components/ContactCTA.astro";
 import Hero from "../../components/Hero.astro";
+// Personal info
+import { personalInfo } from "../../constants";
+// Object to translate
+import { t, changeLanguage } from "i18next";
 
 changeLanguage("es");
 ---
 
-<BaseLayout title="About | Jeanine White" description="About Jeanine White Lorem Ipsum">
+<BaseLayout title={`${t("common.workTabTitle")} | ${personalInfo.name}`}
+description="About Jeanine White Lorem Ipsum">
 	<div class="stack gap-20">
 		<main class="wrapper about">
 			<Hero

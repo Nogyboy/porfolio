@@ -51,4 +51,11 @@ const {
 		});
 		observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
 	}
+
+	// Viewtransition event to set the theme attribute on the html element.
+	// This is used to prevent the flash of light mode when the page loads.
+	document.addEventListener('astro:after-swap', () => {
+		const isDark = getThemePreference() === 'dark';
+		document.documentElement.classList[isDark ? 'add' : 'remove']('theme-dark');
+	});
 </script>

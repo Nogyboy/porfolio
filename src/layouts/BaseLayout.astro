@@ -21,11 +21,11 @@ const { title, description } = Astro.props;
 	<head>
 		<ViewTransitions />
 		<MainHead title={title} description={description} />
-		<HeadHrefLangs />
+		<HeadHrefLangs transition:persist />
 	</head>
 	<body>
 		<div class="stack backgrounds">
-			<Nav transition:animate="slide"/>
+			<Nav />
 			<slot />
 			<Footer />
 		</div>
