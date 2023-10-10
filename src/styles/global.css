@@ -1,45 +1,45 @@
 /* Global variables */
 :root {
 	/* Colors */
-	--gray-0: #090b11;
-	--gray-50: #141925;
-	--gray-100: #283044;
-	--gray-200: #3d4663;
-	--gray-300: #505d84;
-	--gray-400: #6474a2;
-	--gray-500: #8490b5;
-	--gray-600: #a3acc8;
-	--gray-700: #c3cadb;
-	--gray-800: #e3e6ee;
-	--gray-900: #f3f4f7;
-	--gray-999-basis: 0, 0%, 100%;
-	--gray-999_40: hsla(var(--gray-999-basis), 0.4);
-	--gray-999: #ffffff;
+	--red-0: #922d2d;
+	--red-50: #a41414;
+	--red-100: #c82828;
+	--red-200: #e23d3d;
+	--red-300: #f05050;
+	--red-400: #ff6474;
+	--red-500: #ff8490;
+	--red-600: #ffa3ac;
+	--red-700: #ffc3ca;
+	--red-800: #fee3e6;
+	--red-900: #fff3f4;
+	--red-999-basis: 0, 0%, 100%;
+	--red-999_40: hsla(var(--red-999-basis), 0.4);
+	--red-999: #ffffff;
 
-	--accent-light: #c561f6;
-	--accent-regular: #7611a6;
-	--accent-dark: #1c0056;
-	--accent-overlay: hsla(280, 89%, 67%, 0.33);
+	--accent-light: #ff88a8; /* Lighter shade of red */
+	--accent-regular: #ff5066; /* Medium shade of red */
+	--accent-dark: #ff0a24; /* Darker shade of red */
+	--accent-overlay: hsla(0, 89%, 67%, 0.33);
 	--accent-subtle-overlay: var(--accent-overlay);
 	--accent-text-over: var(--gray-999);
 
 	--link-color: var(--accent-regular);
 
 	/* Menu */
-	--menu-text-color: var(--gray-100);
+	--menu-text-color: var(--red-100);
 	--menu-text-color-active: var(--accent-regular);
-	--menu-bg-color-active: var(--gray-800);
-	--menu-text-color-hover: var(--gray-900);
+	--menu-bg-color-active: var(--red-800);
+	--menu-text-color-hover: var(--red-900);
 	--menu-bg-color-hover: var(--accent-regular);
 
 	/* Menu Mobile */
-	--menu-text-color-mobile: var(--gray-900);
+	--menu-text-color-mobile: var(--red-900);
 
 	/* Gradients */
 	--gradient-stop-1: var(--accent-light);
 	--gradient-stop-2: var(--accent-regular);
 	--gradient-stop-3: var(--accent-dark);
-	--gradient-subtle: linear-gradient(150deg, var(--gray-900) 19%, var(--gray-999) 150%);
+	--gradient-subtle: linear-gradient(150deg, var(--red-900) 19%, var(--red-999) 150%);
 	--gradient-accent: linear-gradient(
 		150deg,
 		var(--gradient-stop-1),
@@ -52,7 +52,7 @@
 		var(--accent-regular),
 		var(--accent-dark)
 	);
-	--gradient-stroke: linear-gradient(180deg, var(--gray-900), var(--gray-700));
+	--gradient-stroke: linear-gradient(180deg, var(--red-900), var(--red-700));
 
 	/* Shadows */
 	--shadow-sm: 0px 6px 3px rgba(9, 11, 17, 0.01), 0px 4px 2px rgba(9, 11, 17, 0.01),
@@ -84,48 +84,48 @@
 }
 
 :root.theme-dark {
-	--gray-0: #ffffff;
-	--gray-50: #f3f4f7;
-	--gray-100: #e3e6ee;
-	--gray-200: #c3cadb;
-	--gray-300: #a3acc8;
-	--gray-400: #8490b5;
-	--gray-500: #6474a2;
-	--gray-600: #505d84;
-	--gray-700: #3d4663;
-	--gray-800: #283044;
-	--gray-900: #141925;
-	--gray-999-basis: 225, 31%, 5%;
-	--gray-999: #090b11;
+	--red-0: #ffffff;
+	--red-50: #f3f4f7;
+	--red-100: #e3e6ee;
+	--red-200: #c3cadb;
+	--red-300: #a3acc8;
+	--red-400: #8490b5;
+	--red-500: #6474a2;
+	--red-600: #505d84;
+	--red-700: #3d4663;
+	--red-800: #283044;
+	--red-900: #141925;
+	--red-999-basis: 225, 31%, 5%;
+	--red-999: #090b11;
 
 	--accent-light: #1c0056;
 	--accent-regular: #7611a6;
 	--accent-dark: #c561f6;
 	--accent-overlay: hsla(280, 89%, 67%, 0.33);
 	--accent-subtle-overlay: hsla(281, 81%, 36%, 0.33);
-	--accent-text-over: var(--gray-0);
+	--accent-text-over: var(--red-0);
 
 	--link-color: var(--accent-dark);
 
 	/* Menu */
-	--menu-text-color: var(--gray-0);
-	--menu-text-color-active: var(--gray-0);
+	--menu-text-color: var(--red-0);
+	--menu-text-color-active: var(--red-0);
 	--menu-bg-color-active: var(--accent-regular);
-	--menu-text-color-hover: var(--gray-0);
+	--menu-text-color-hover: var(--red-0);
 	--menu-bg-color-hover: var(--accent-overlay);
 
 	/* Menu Mobile */
-	--menu-text-color-mobile: var(--gray-0);
+	--menu-text-color-mobile: var(--red-0);
 
 	--gradient-stop-1: #4c11c6;
-	--gradient-subtle: linear-gradient(150deg, var(--gray-900) 19%, var(--gray-999) 81%);
+	--gradient-subtle: linear-gradient(150deg, var(--red-900) 19%, var(--red-999) 81%);
 	--gradient-accent-orange: linear-gradient(
 		150deg,
 		#ca7879,
 		var(--accent-regular),
 		var(--accent-light)
 	);
-	--gradient-stroke: linear-gradient(180deg, var(--gray-600), var(--gray-800));
+	--gradient-stroke: linear-gradient(180deg, var(--red-600), var(--red-800));
 
 	--shadow-sm: 0px 6px 3px rgba(255, 255, 255, 0.01), 0px 4px 2px rgba(255, 255, 255, 0.01),
 		0px 2px 2px rgba(255, 255, 255, 0.02), 0px 0px 1px rgba(255, 255, 255, 0.03);
@@ -142,8 +142,8 @@ body {
 }
 
 body {
-	background-color: var(--gray-999);
-	color: var(--gray-200);
+	background-color: var(--red-999);
+	color: var(--red-200);
 	font-family: var(--font-body);
 	-webkit-font-smoothing: antialiased;
 	line-height: 1.5;
@@ -173,7 +173,7 @@ h5 {
 	line-height: 1.1;
 	font-family: var(--font-brand);
 	font-weight: 600;
-	color: var(--gray-100);
+	color: var(--red-100);
 }
 
 h1 {
